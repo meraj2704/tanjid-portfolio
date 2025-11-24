@@ -21,79 +21,90 @@ import {
   Library,
   GraduationCap,
   Feather,
+  Smartphone,
 } from "lucide-react";
 
 // Publication data
 const publications = [
   {
     id: 1,
-    title: "Advanced Techniques for Responsive Web Design in Modern Frameworks",
-    publisher: "Journal of Web Engineering",
-    date: "March 2024",
-    url: "https://example.com/publication/1",
+    title:
+      "Performance Comparison of CycleGAN for Image-to-Image Translation in Multiple Domains",
+    publisher:
+      "IEEE - International Conference on Next-Generation Computing, IoT and Machine Learning (NCIM 2025)",
+    date: "2025",
+    url: "https://ieeexplore.ieee.org/document/your_paper_id",
     description:
-      "An in-depth analysis of responsive design patterns in React, Vue, and Angular applications with performance comparisons and best practices.",
+      "Comparative analysis of CycleGAN performance across different image translation domains including style transfer, season translation, and medical imaging.",
     abstract:
-      "This paper explores cutting-edge responsive design methodologies implemented in modern JavaScript frameworks. We conducted performance benchmarks across 50+ implementations and identified key optimization strategies that can improve load times by up to 42% while maintaining design integrity across devices.",
+      "This research paper presents a comprehensive performance evaluation of CycleGAN architecture across multiple image-to-image translation domains. We conducted experiments on diverse datasets including style transfer, seasonal changes, and medical image adaptation. Our findings reveal domain-specific performance variations and optimization strategies for improved translation quality and training efficiency.",
     topics: [
-      "Responsive Design",
-      "Web Performance",
-      "React",
-      "Vue.js",
-      "Angular",
-    ],
-    citation: "Web Eng. J., 2024, 12(3), 45-67",
-    citationCount: 28,
-    readTime: "12 min read",
-    icon: <BookOpen className="h-6 w-6" />,
-    accentColor: "from-blue-500 to-cyan-500",
-    badge: "Research Paper",
-  },
-  {
-    id: 2,
-    title: "Machine Learning Integration in Frontend Development Workflows",
-    publisher: "International Conference on AI Systems",
-    date: "January 2024",
-    url: "https://example.com/publication/2",
-    description:
-      "Exploring practical approaches to integrate machine learning models into frontend applications without compromising performance or user experience.",
-    abstract:
-      "Our research presents a novel framework for integrating machine learning capabilities directly into frontend applications. We demonstrate how TensorFlow.js and similar libraries can be optimized for production environments, reducing bundle size by 67% while maintaining model accuracy.",
-    topics: [
+      "CycleGAN",
+      "Image Translation",
+      "Deep Learning",
+      "Computer Vision",
       "Machine Learning",
-      "Frontend Development",
-      "TensorFlow.js",
-      "Performance Optimization",
     ],
-    citation: "Proc. IC-AIS 2024, 234-241",
-    citationCount: 14,
-    readTime: "8 min read",
-    icon: <BarChart3 className="h-6 w-6" />,
+    citation:
+      "T. H. Amran, M. Y. Arafat, T. Jawad, 'Performance Comparison of CycleGAN for Image-to-Image Translation in Multiple Domains,' NCIM 2025, IEEE",
+    citationCount: null,
+    readTime: "10 min read",
+    icon: <BookOpen className="h-6 w-6" />,
     accentColor: "from-purple-500 to-pink-500",
     badge: "Conference Paper",
   },
   {
-    id: 3,
-    title: "Accessibility-First Approach in Modern Web Applications",
-    publisher: "Web Accessibility Journal",
-    date: "November 2023",
-    url: "https://example.com/publication/3",
+    id: 2,
+    title:
+      "Comparative Analysis of Traditional and Deep Learning Models Using Trigram-TF-IDF for Bangla Restaurant Sentiment Classification",
+    publisher:
+      "International Conference on Electrical Information and Communication Technology (EICT 2025)",
+    date: "2025",
+    url: null,
     description:
-      "A comprehensive guide to implementing accessibility standards from the initial design phase through development and testing in complex web applications.",
+      "Research comparing traditional machine learning approaches with deep learning models for sentiment analysis in Bangla restaurant reviews using enhanced feature extraction.",
     abstract:
-      "This publication introduces an accessibility-first development methodology that integrates WCAG guidelines throughout the entire development lifecycle. Our approach resulted in 89% fewer accessibility issues in production applications compared to traditional testing methods.",
+      "This study investigates the effectiveness of traditional machine learning models versus deep learning approaches for sentiment classification in Bangla restaurant reviews. We propose a Trigram-TF-IDF feature extraction method and compare performance across multiple architectures. The research provides insights into optimal model selection for low-resource languages and domain-specific sentiment analysis tasks.",
     topics: [
-      "Web Accessibility",
-      "WCAG Guidelines",
-      "Inclusive Design",
-      "Testing",
+      "Sentiment Analysis",
+      "Bangla NLP",
+      "Deep Learning",
+      "Machine Learning",
+      "TF-IDF",
     ],
-    citation: "Web Access. J., 2023, 8(2), 112-134",
-    citationCount: 31,
-    readTime: "15 min read",
-    icon: <Users className="h-6 w-6" />,
+    citation:
+      "M. H. Rumi, T. H. Amran, F. Muntashir, 'Comparative Analysis of Traditional and Deep Learning Models Using Trigram-TF-IDF for Bangla Restaurant Sentiment Classification,' EICT 2025 (Under Review)",
+    citationCount: null,
+    readTime: "12 min read",
+    icon: <BarChart3 className="h-6 w-6" />,
+    accentColor: "from-blue-500 to-cyan-500",
+    badge: "Conference Paper",
+  },
+  {
+    id: 3,
+    title:
+      "Mobile Application Development Best Practices for Educational Technology Platforms",
+    publisher: "Northern University Bangladesh - Computer Science Department",
+    date: "2023",
+    url: null,
+    description:
+      "Comprehensive study on developing effective EdTech mobile applications based on practical experience from multiple educational platform developments.",
+    abstract:
+      "This research synthesizes best practices and lessons learned from developing multiple educational technology mobile applications including LivQuiz, Softmax Online School, and TutorsPlan. The paper covers architecture patterns, state management strategies, performance optimization, and user experience considerations specific to educational mobile applications. Findings are based on real-world deployment and user feedback analysis.",
+    topics: [
+      "Mobile Development",
+      "EdTech",
+      "Flutter",
+      "User Experience",
+      "Software Architecture",
+    ],
+    citation:
+      "T. H. Amran, 'Mobile Application Development Best Practices for Educational Technology Platforms,' NUB CSE Department, 2023",
+    citationCount: null,
+    readTime: "8 min read",
+    icon: <Smartphone className="h-6 w-6" />,
     accentColor: "from-green-500 to-emerald-500",
-    badge: "Journal Article",
+    badge: "Technical Report",
   },
 ];
 
@@ -258,7 +269,7 @@ export function Publications() {
         </motion.div>
 
         {/* Category filter */}
-        <motion.div
+        {/* <motion.div
           className="flex flex-wrap justify-center gap-3 mb-12"
           variants={itemVariants}
         >
@@ -277,7 +288,7 @@ export function Publications() {
               </button>
             )
           )}
-        </motion.div>
+        </motion.div> */}
 
         {/* Publications grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -418,7 +429,7 @@ export function Publications() {
                       </ul>
 
                       <motion.a
-                        href={pub.url}
+                        href={pub.url || ""}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center text-sm font-medium text-accent-primary hover:text-accent-secondary transition-colors mt-2 group/link"

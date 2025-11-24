@@ -1,187 +1,253 @@
 export const projectsData = [
   {
     id: 1,
-    name: "Ejazah.com",
+    name: "LivQuiz - AI EdTech Platform",
     overview:
-      "A modern travel agency platform offering seamless flight, hotel, and visa booking services for global travelers.",
+      "An AI-powered educational platform featuring live quizzes, interactive flashcards, study sets, and multiplayer quiz games with AI learning integration.",
     longDescription: `
-Ejazah.com is a full-featured travel booking platform designed to simplify trip planning. 
-It provides a one-stop solution for booking **flights, hotels, and visas**, ensuring a smooth and hassle-free travel experience.  
-The platform offers secure payments, real-time availability checks, and personalized travel recommendations.  
+LivQuiz is a comprehensive EdTech mobile application that revolutionizes learning through AI-powered features. 
+The platform enables **interactive learning experiences** with live quizzes, flashcards, study sets, and multiplayer gaming modes.  
 
-Our team focused on creating a **user-friendly and responsive frontend** with intuitive navigation, clean UI, and fast performance, 
-making the booking process simple for travelers worldwide.
+Key features include:  
+- **AI-Powered Learning** - Personalized study experiences and adaptive learning paths  
+- **Multiplayer Quiz Play** - Real-time competitive quiz games with other users  
+- **Study Sets & Flashcards** - Create and share custom study materials  
+- **Exam Practice** - Comprehensive test preparation with analytics  
+- **Public Community** - Collaborative learning through community features  
+- **Performance Tracking** - Monitor learning progress and achievements  
+
+Built with **Flutter and Dart**, the application uses **Riverpod for state management** and integrates with **Firebase for backend services**. 
+The AI features provide personalized learning recommendations to enhance user engagement and educational outcomes.
     `,
-    thumbnail: "/projects/ejazah/ejazah-thumbnail.png",
+    thumbnail: "/projects/livquiz/livquiz-thumbnail.png",
     images: [
-      "/projects/ejazah/ejazah-thumbnail.png",
-      "/projects/ejazah/ejazah-login.png",
-      "/projects/ejazah/ejazah-search.png",
-      "/projects/ejazah/ejazah-flights.png",
-      "/projects/ejazah/ejazah-flight-responsive.png",
+      "/projects/livquiz/livquiz-thumbnail.png",
+      "/projects/livquiz/livquiz-home.png",
+      "/projects/livquiz/livquiz-quiz.png",
+      "/projects/livquiz/livquiz-flashcards.png",
+      "/projects/livquiz/livquiz-multiplayer.png",
     ],
-    liveDemo: "https://dev.ejazah.com/", // replace with actual live link if available
+    liveDemo: "https://livquiz.com",
     githubLink: null, // private repo
     Technology: [
-      { name: "Next.js" },
-      { name: "Tailwind CSS" },
-      { name: "Shadcn" },
-      { name: "React Query" },
+      { name: "Flutter" },
+      { name: "Dart" },
+      { name: "Riverpod" },
+      { name: "Firebase" },
+      { name: "REST APIs" },
+      { name: "AI Integration" },
     ],
     startDate: "2025-01-01",
-    endDate: "Ongoing",
+    endDate: "Present",
     status: "In Progress",
     featured: true,
   },
   {
-    id: 5,
-    name: "EMR (Electronic Medical Record)",
+    id: 2,
+    name: "TutorsPlan - Educational MVP",
     overview:
-      "A production-ready healthcare solution that enables doctors to create prescriptions, manage patient records, and access medical history — already deployed in 3 hospitals.",
+      "A complete educational platform MVP with course management, game-based learning, exam systems, and Stripe payment integration.",
     longDescription: `
-The EMR system is a modern healthcare platform designed to simplify doctors’ workflow and improve patient care.  
-It enables doctors to **create prescriptions digitally**, access complete **patient medical history**, and manage healthcare data securely.  
+TutorsPlan is a comprehensive educational platform developed from scratch to launch the business. 
+The application provides a complete learning ecosystem with **course management, interactive gameplay, and secure payment processing**.  
 
-Key features include:  
-- **Prescription Management** – doctors can create and edit prescriptions with ease.  
-- **Patient Records** – maintain comprehensive patient profiles with medical history.  
-- **Medicine Database** – integrated list of all medicines for quick selection.  
-- **Test Database** – doctors can choose from predefined tests and add them to prescriptions.  
-- **Previous History Access** – view patients' past prescriptions and test results.  
-- **Data Accuracy & Security** – ensures sensitive patient data is stored and accessed safely.  
+Core modules include:  
+- **Authentication System** - Secure user registration and login  
+- **Course Management** - Browse, view, and enroll in courses  
+- **Game-Based Learning** - Interactive educational games for engagement  
+- **Exam System** - Complete testing and assessment platform  
+- **Profile Management** - User profiles and progress tracking  
+- **Stripe Payment** - Secure payment processing with login verification  
 
-✅ **Business Impact:**  
-The solution has already been **successfully sold and implemented in 3 hospitals**, where it is being actively used by doctors to digitize healthcare processes.  
-
-This project demonstrates not only technical execution but also real-world adoption, making it a proven and scalable healthcare solution.
+The MVP was developed under tight deadlines to **successfully launch the business**, demonstrating rapid development capabilities and attention to user experience.
     `,
-    thumbnail: "/projects/emr/emr-thumbnail.png",
+    thumbnail: "/projects/tutorsplan/tutorsplan-thumbnail.png",
     images: [
-      "/projects/emr/emr-thumbnail.png",
-      "/projects/emr/emr-rx-with-header.png",
-      "/projects/emr/emr-rx.png",
-      "/projects/emr/emr-medication.png",
-      "/projects/emr/emr-pdf.png",
+      "/projects/tutorsplan/tutorsplan-thumbnail.png",
+      "/projects/tutorsplan/tutorsplan-courses.png",
+      "/projects/tutorsplan/tutorsplan-game.png",
+      "/projects/tutorsplan/tutorsplan-exam.png",
+      "/projects/tutorsplan/tutorsplan-profile.png",
     ],
-    liveDemo: null, // internal healthcare system, not public
+    liveDemo: "https://www.tutorsplan.com",
     githubLink: null, // private repo
     Technology: [
-      { name: "Next.js" },
-      { name: "Tailwind CSS" },
-      { name: "Shadcn" },
-      { name: "Redux" },
-      { name: "Express.js" },
-      { name: "MongoDB" },
+      { name: "Flutter" },
+      { name: "Dart" },
+      { name: "Stripe" },
+      { name: "REST APIs" },
+      { name: "State Management" },
+      { name: "Git" },
     ],
-    startDate: "2024-06-01",
-    endDate: "2025-01-30",
-    status: "Completed",
-    featured: true,
-  },
-  {
-    id: 2,
-    name: "Her Power",
-    overview:
-      "A government-backed platform empowering women through education, career guidance, and resources in Bangladesh.",
-    longDescription: `
-Her Power is a comprehensive platform launched under the Bangladesh Government ICT initiative. 
-It is designed to empower women by providing access to courses, career placement support, events, blogs, and other resources. 
-The platform includes 6 main modules: Shop Now, Course, Career Placement, Events, Blogs, Resources, Success Stories, and Challenges. 
-Our team successfully completed the **frontend development** using modern technologies, ensuring a responsive, user-friendly, and interactive experience.
-    `,
-    thumbnail: "/projects/her-power/her-power-thumbnail.png",
-    images: [
-      "/projects/her-power/her-power-thumbnail.png",
-      "/projects/her-power/her-power-home.png",
-      "/projects/her-power/her-power-shop-now.png",
-      "/projects/her-power/her-power-course.png",
-    ],
-    liveDemo: "https://portal.herpower.gov.bd/en", // if no live demo yet
-    githubLink: null, // if not public
-    Technology: [
-      { name: "Next.js" },
-      { name: "Tailwind CSS" },
-      { name: "Shadcn" },
-      { name: "React Query" },
-    ],
-    startDate: "2024-01-01",
-    endDate: "2024-03-15",
+    startDate: "2025-04-01",
+    endDate: "2025-07-30",
     status: "Completed",
     featured: true,
   },
   {
     id: 3,
-    name: "ATI Limited Website",
+    name: "Softmax Online School",
     overview:
-      "The official corporate website of ATI Limited, featuring career opportunities, job applications, and contact management with a secure backend.",
+      "Enhanced EdTech mobile application with improved user experience, auto-login features, and scalable code architecture.",
     longDescription: `
-ATI Limited's official website was developed to provide an interactive and professional online presence.  
-It showcases company services, career opportunities, and allows visitors to engage directly through job applications and contact forms.  
+Softmax Online School is an established EdTech platform where I contributed to significant improvements in functionality and user experience. 
+The project involved **analyzing business requirements, conducting R&D, and enhancing existing codebase** for better performance and maintainability.  
 
-I worked on developing the **backend APIs** for the platform, including:  
-- **Job Application Management** – candidates can apply for positions, and HR can track applications.  
-- **Career Section** – displays open roles and manages applicant data.  
-- **Contact Module** – enables secure communication with the company.  
-- **Additional APIs** – for services, inquiries, and admin functionalities.  
+Key contributions:  
+- **Seamless Auto-Login** - Implemented automatic re-login after app reinstallation  
+- **Code Refactoring** - Revised architecture for better scalability and maintainability  
+- **User Feedback Integration** - Leveraged user input to develop requested features  
+- **Support Systems** - Enhanced customer support and help features  
+- **Performance Optimization** - Improved app responsiveness and loading times  
 
-The backend was built with **Express.js and MongoDB**, ensuring secure data handling, scalability, and smooth integration with the frontend.
+Through continuous **research and development**, the application evolved to better serve educational needs while maintaining a positive user experience.
     `,
-    thumbnail: "/projects/ati-limited/ati-limited-thumbnail.png",
+    thumbnail: "/projects/softmax/softmax-thumbnail.png",
     images: [
-      "/projects/ati-limited/ati-limited-thumbnail.png",
-      "/projects/ati-limited/ati-home.png",
-      "/projects/ati-limited/ati-about.png",
-      "/projects/ati-limited/ati-blog.png",
+      "/projects/softmax/softmax-thumbnail.png",
+      "/projects/softmax/softmax-home.png",
+      "/projects/softmax/softmax-courses.png",
+      "/projects/softmax/softmax-profile.png",
+      "/projects/softmax/softmax-support.png",
     ],
-    liveDemo: "https://atilimited.net", // replace with actual live link if needed
+    liveDemo: "https://softmaxonlineschool.com",
     githubLink: null, // private repo
     Technology: [
-      { name: "Express.js" },
-      { name: "MongoDB" },
-      { name: "Node.js" },
-      { name: "Mongoose" },
+      { name: "Flutter" },
+      { name: "Dart" },
+      { name: "REST APIs" },
+      { name: "Code Refactoring" },
+      { name: "User Research" },
+      { name: "Performance Optimization" },
     ],
-    startDate: "2024-07-01",
-    endDate: "2024-08-15",
+    startDate: "2024-01-01",
+    endDate: "2024-11-30",
+    status: "Completed",
+    featured: true,
+  },
+  {
+    id: 4,
+    name: "NUBCC - University App",
+    overview:
+      "Official university application for Northern University Bangladesh featuring department resources, utilities, and communication tools.",
+    longDescription: `
+NUBCC is the official mobile application for the Computer Science department at Northern University Bangladesh. 
+The app serves as a **comprehensive resource hub** for students, faculty, and alumni, providing essential tools and information in one platform.  
+
+Features include:  
+- **Faculty & CR Lists** - Complete directory of teaching staff and class representatives  
+- **Club Committees** - Information about student organizations and leadership  
+- **Alumni Network** - Connect with graduates and industry professionals  
+- **Notifications & Updates** - Real-time announcements and event information  
+- **Utility Tools** - Weather updates, Brainstorm game, CGPA/GPA calculators  
+- **Department Resources** - Course materials, schedules, and academic information  
+
+The application is **published on Google Play Store** with active users, demonstrating end-to-end development and deployment capabilities.
+    `,
+    thumbnail: "/projects/nubcc/nubcc-thumbnail.png",
+    images: [
+      "/projects/nubcc/nubcc-thumbnail.png",
+      "/projects/nubcc/nubcc-home.png",
+      "/projects/nubcc/nubcc-faculty.png",
+      "/projects/nubcc/nubcc-utilities.png",
+      "/projects/nubcc/nubcc-alumni.png",
+    ],
+    liveDemo: "https://play.google.com/store/apps/details?id=com.tanjid.nubcc",
+    githubLink: null, // private repo
+    Technology: [
+      { name: "Flutter" },
+      { name: "Dart" },
+      { name: "Google Play Store" },
+      { name: "REST APIs" },
+      { name: "Local Storage" },
+    ],
+    startDate: "2023-06-01",
+    endDate: "2023-12-15",
     status: "Completed",
     featured: false,
   },
   {
-    id: 4,
-    name: "My Kitchen",
+    id: 5,
+    name: "My Akij Takaful - Insurance App",
     overview:
-      "A modern portfolio website for My Kitchen, showcasing company details, services, and project highlights with a clean and responsive UI.",
+      "Insurance application with claim tracking, digital health cards, and QR functionality for efficient healthcare service management.",
     longDescription: `
-My Kitchen is a portfolio website designed to represent the brand identity and showcase its wide range of projects.  
-The platform highlights **company details, services, and completed works** in a visually engaging way.  
+My Akij Takaful is an insurance and healthcare application developed for Akij Venture Limited. 
+The app provides **comprehensive insurance management** with focus on healthcare services and claim processing.  
 
-I developed the **frontend** using **Next.js, Tailwind CSS, and Shadcn**, focusing on:  
-- A **responsive design** optimized for mobile and desktop.  
-- A **projects showcase section** highlighting My Kitchen’s completed works.  
-- **Clean UI components** built with Shadcn for consistency and accessibility.  
-- **Fast-loading pages** with smooth navigation and modern animations.  
+Key functionalities:  
+- **Claim Tracking System** - Complete workflow for insurance claim submission and tracking  
+- **Digital Health Cards** - QR-enabled health cards for quick access to insurance information  
+- **Healthcare Services** - Easy access to medical services and provider network  
+- **REST API Integration** - Seamless connection with backend insurance systems  
+- **Secure Authentication** - Protected user access to sensitive healthcare data  
 
-The site reflects the company’s professionalism while providing visitors with an easy way to explore its services and achievements.
+The application contributes to **efficient healthcare service delivery** by digitizing insurance processes and making healthcare access more convenient for users.
     `,
-    thumbnail: "/projects/my-kitchen/my-kitchen-thumbnail.png",
+    thumbnail: "/projects/akij-takaful/akij-takaful-thumbnail.png",
     images: [
-      "/projects/my-kitchen/my-kitchen-thumbnail.png",
-      "/projects/my-kitchen/my-kitchen-home.png",
-      "/projects/my-kitchen/my-kitchen-products.png",
-      "/projects/my-kitchen/my-kitchen-image-gallery.png",
-      "/projects/my-kitchen/my-kitchen-product-details.png",
+      "/projects/akij-takaful/akij-takaful-thumbnail.png",
+      "/projects/akij-takaful/akij-takaful-claims.png",
+      "/projects/akij-takaful/akij-takaful-healthcard.png",
+      "/projects/akij-takaful/akij-takaful-profile.png",
+      "/projects/akij-takaful/akij-takaful-services.png",
     ],
-    liveDemo: "https://www.mykitchen-bd.com/", // replace with actual link if available
+    liveDemo: "https://play.google.com/store/apps/details?id=com.akijtakafullife.myAkijTakaful",
     githubLink: null, // private repo
     Technology: [
-      { name: "Next.js" },
-      { name: "Tailwind CSS" },
-      { name: "Shadcn" },
+      { name: "Flutter" },
+      { name: "Dart" },
+      { name: "GetX" },
+      { name: "REST APIs" },
+      { name: "QR Integration" },
+      { name: "Enterprise Development" },
     ],
-    startDate: "2024-05-01",
-    endDate: "2024-06-10",
+    startDate: "2023-06-01",
+    endDate: "2023-10-30",
     status: "Completed",
     featured: false,
   },
+  {
+    id: 6,
+    name: "Java Desktop Applications",
+    overview:
+      "Collection of Java desktop applications including Notepad, ATM system, and Library Management with MySQL integration.",
+    longDescription: `
+A suite of Java-based desktop applications demonstrating proficiency in **desktop development and database management**. 
+These projects showcase the ability to create **functional, user-friendly desktop software** with persistent data storage.  
 
+Applications include:  
+- **Notepad Application** - Feature-rich text editor with file management  
+- **ATM System** - Banking simulation with transaction processing and user accounts  
+- **Library Management System** - Complete library operations with book tracking  
+
+All applications feature:  
+- **Java Swing GUI** - Interactive and intuitive user interfaces  
+- **MySQL Integration** - Persistent data storage and retrieval  
+- **Local Database Handling** - Efficient data management on local systems  
+- **Object-Oriented Design** - Clean, maintainable code architecture  
+
+These projects demonstrate versatility in software development across different platforms and application types.
+    `,
+    thumbnail: "/projects/java-apps/java-apps-thumbnail.png",
+    images: [
+      "/projects/java-apps/java-apps-thumbnail.png",
+      "/projects/java-apps/java-notepad.png",
+      "/projects/java-apps/java-atm.png",
+      "/projects/java-apps/java-library.png",
+    ],
+    liveDemo: null,
+    githubLink: "https://github.com/Tanjid470/Java-Desktop-Applications",
+    Technology: [
+      { name: "Java" },
+      { name: "Java Swing" },
+      { name: "MySQL" },
+      { name: "Desktop Development" },
+      { name: "Database Design" },
+    ],
+    startDate: "2025-04-01",
+    endDate: "2025-07-30",
+    status: "Completed",
+    featured: false,
+  }
 ];

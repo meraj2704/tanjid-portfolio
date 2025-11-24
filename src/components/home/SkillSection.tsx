@@ -7,13 +7,9 @@ import {
 } from "framer-motion";
 import { Card, CardTitle } from "../ui/card";
 import { useRef } from "react";
-import { FaNodeJs } from "react-icons/fa6";
-import { FaReact } from "react-icons/fa";
-import { SiNestjs, SiNextdotjs } from "react-icons/si";
-import { SiExpress } from "react-icons/si";
-import { BiLogoPostgresql } from "react-icons/bi";
-import { FaGithub } from "react-icons/fa";
-import { SiTypescript } from "react-icons/si";
+import { FaJava, FaGithub } from "react-icons/fa6";
+import { SiDart, SiFlutter, SiLeetcode, SiCodechef, SiHackerrank } from "react-icons/si";
+import { Brain, Cpu, Database, Smartphone, Puzzle } from "lucide-react";
 import { Sparkles } from "lucide-react";
 
 export function SkillsSection() {
@@ -67,44 +63,64 @@ export function SkillsSection() {
 
   const icons = [
     {
-      icon: <FaNodeJs className="h-10 w-10 text-green-500 mb-3" />,
-      title: "Node.js",
+      icon: <FaJava className="h-10 w-10 text-red-500 mb-3" />,
+      title: "Java",
+      accentColor: "from-red-500 to-orange-500",
+    },
+    {
+      icon: <SiDart className="h-10 w-10 text-blue-500 mb-3" />,
+      title: "Dart",
+      accentColor: "from-blue-500 to-cyan-500",
+    },
+    {
+      icon: <SiFlutter className="h-10 w-10 text-cyan-500 mb-3" />,
+      title: "Flutter",
+      accentColor: "from-cyan-500 to-blue-400",
+    },
+    {
+      icon: <Brain className="h-10 w-10 text-purple-500 mb-3" />,
+      title: "Machine Learning",
+      accentColor: "from-purple-500 to-pink-500",
+    },
+    {
+      icon: <Cpu className="h-10 w-10 text-green-500 mb-3" />,
+      title: "LLM & AI",
       accentColor: "from-green-500 to-emerald-500",
     },
     {
-      icon: <FaReact className="h-10 w-10 text-blue-400 mb-3" />,
-      title: "React",
-      accentColor: "from-blue-400 to-cyan-400",
-    },
-    {
-      icon: <SiNextdotjs className="h-10 w-10 text-foreground mb-3" />,
-      title: "Next.js",
-      accentColor: "from-foreground to-muted-foreground",
-    },
-    {
-      icon: <SiExpress className="h-10 w-10 text-amber-500 mb-3" />,
-      title: "Express.js",
+      icon: <Puzzle className="h-10 w-10 text-amber-500 mb-3" />,
+      title: "Problem Solving",
       accentColor: "from-amber-500 to-yellow-500",
     },
     {
-      icon: <SiNestjs className="h-10 w-10 text-red-500 mb-3"/>,
-      title: "Nest.js",
-      accentColor: "from-red-500 to-pink-500",
+      icon: <SiLeetcode className="h-10 w-10 text-orange-500 mb-3" />,
+      title: "LeetCode",
+      accentColor: "from-orange-500 to-red-500",
     },
     {
-      icon: <BiLogoPostgresql className="h-10 w-10 text-blue-600 mb-3" />,
+      icon: <Database className="h-10 w-10 text-blue-600 mb-3" />,
       title: "PostgreSQL",
       accentColor: "from-blue-600 to-indigo-600",
     },
     {
-      icon: <FaGithub className="h-10 w-10 text-purple-500 mb-3" />,
+      icon: <FaGithub className="h-10 w-10 text-gray-700 mb-3" />,
       title: "Git & GitHub",
-      accentColor: "from-purple-500 to-pink-500",
+      accentColor: "from-gray-600 to-gray-700",
     },
     {
-      icon: <SiTypescript className="h-10 w-10 text-blue-600 mb-3" />,
-      title: "TypeScript",
-      accentColor: "from-blue-600 to-cyan-600",
+      icon: <Smartphone className="h-10 w-10 text-indigo-500 mb-3" />,
+      title: "Mobile Dev",
+      accentColor: "from-indigo-500 to-purple-500",
+    },
+    {
+      icon: <SiCodechef className="h-10 w-10 text-brown-500 mb-3" />,
+      title: "Competitive Programming",
+      accentColor: "from-brown-500 to-yellow-700",
+    },
+    {
+      icon: <SiHackerrank className="h-10 w-10 text-green-600 mb-3" />,
+      title: "HackerRank",
+      accentColor: "from-green-600 to-emerald-600",
     },
   ];
 
@@ -122,7 +138,7 @@ export function SkillsSection() {
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
-          className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full bg-blue-500/5 blur-3xl"
+          className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full bg-red-500/5 blur-3xl"
           animate={{
             x: [0, 20, 0],
             y: [0, -15, 0],
@@ -134,7 +150,7 @@ export function SkillsSection() {
           }}
         />
         <motion.div
-          className="absolute bottom-1/3 left-1/4 w-72 h-72 rounded-full bg-purple-500/5 blur-3xl"
+          className="absolute bottom-1/3 left-1/4 w-72 h-72 rounded-full bg-blue-500/5 blur-3xl"
           animate={{
             x: [0, -20, 0],
             y: [0, 15, 0],
@@ -152,7 +168,7 @@ export function SkillsSection() {
 
         {/* Floating icons */}
         <motion.div
-          className="absolute top-20 left-10 opacity-10 text-blue-300"
+          className="absolute top-20 left-10 opacity-10 text-red-300"
           animate={{
             y: [0, 15, 0],
             rotate: [0, 5, 0],
@@ -163,10 +179,10 @@ export function SkillsSection() {
             ease: "easeInOut",
           }}
         >
-          <FaReact size={48} />
+          <FaJava size={48} />
         </motion.div>
         <motion.div
-          className="absolute bottom-20 right-10 opacity-10 text-purple-300"
+          className="absolute bottom-20 right-10 opacity-10 text-blue-300"
           animate={{
             y: [0, -15, 0],
             rotate: [0, -5, 0],
@@ -178,7 +194,7 @@ export function SkillsSection() {
             delay: 0.5,
           }}
         >
-          <FaNodeJs size={48} />
+          <SiFlutter size={48} />
         </motion.div>
       </div>
 
@@ -196,7 +212,7 @@ export function SkillsSection() {
             Skills & Technologies
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            The tools and technologies I use to bring ideas to life
+            My technical arsenal for building innovative software solutions and solving complex problems
           </p>
         </motion.div>
 
@@ -236,6 +252,27 @@ export function SkillsSection() {
               </motion.div>
             </motion.div>
           ))}
+        </motion.div>
+
+        {/* Additional Skills Info */}
+        <motion.div
+          className="mt-16 text-center"
+          variants={itemVariants}
+        >
+          <div className="inline-flex flex-wrap justify-center gap-6 text-sm text-muted-foreground max-w-3xl mx-auto">
+            <div className="flex items-center gap-2 bg-muted/50 px-4 py-2 rounded-full">
+              <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+              <span>370+ LeetCode Problems Solved</span>
+            </div>
+            <div className="flex items-center gap-2 bg-muted/50 px-4 py-2 rounded-full">
+              <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
+              <span>ICPC Dhaka Regional 2021 Participant</span>
+            </div>
+            <div className="flex items-center gap-2 bg-muted/50 px-4 py-2 rounded-full">
+              <span className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></span>
+              <span>Published ML Research Papers</span>
+            </div>
+          </div>
         </motion.div>
       </div>
     </motion.section>

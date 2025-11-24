@@ -9,6 +9,7 @@ import {
   Sparkles,
   MessageCircle,
   Phone,
+  MapPin,
 } from "lucide-react";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
@@ -49,19 +50,19 @@ export function ContactSection() {
   const socialLinks = [
     {
       icon: <Mail className="h-5 w-5" />,
-      href: "mailto:merajhossain15901@gmail.com",
+      href: "mailto:tanjidhs470@gmail.com",
       label: "Email",
       color: "from-blue-500 to-cyan-500",
     },
     {
       icon: <Github className="h-5 w-5" />,
-      href: "https://github.com/meraj2704",
+      href: "https://github.com/Tanjid470",
       label: "GitHub",
       color: "from-purple-500 to-pink-500",
     },
     {
       icon: <Linkedin className="h-5 w-5" />,
-      href: "https://www.linkedin.com/in/meraj-hossain-6566b8231/",
+      href: "https://www.linkedin.com/in/tanjid-amran-08b738202/",
       label: "LinkedIn",
       color: "from-blue-600 to-blue-700",
     },
@@ -71,15 +72,21 @@ export function ContactSection() {
     {
       icon: <Mail className="h-6 w-6" />,
       title: "Email",
-      value: "merajhossain15901@gmail.com",
-      link: "mailto:merajhossain15901@gmail.com",
+      value: "tanjidhs470@gmail.com",
+      link: "mailto:tanjidhs470@gmail.com",
     },
     {
       icon: <Phone className="h-6 w-6" />,
       title: "Phone",
-      value: "01684088348",
-      link: "tel:01684088348",
-    }
+      value: "+880 1645144735",
+      link: "tel:+8801645144735",
+    },
+    {
+      icon: <MapPin className="h-6 w-6" />,
+      title: "Location",
+      value: "Dhaka, Bangladesh",
+      link: "#",
+    },
   ];
 
   return (
@@ -95,7 +102,7 @@ export function ContactSection() {
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
-          className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full bg-blue-500/5 blur-3xl"
+          className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full bg-red-500/5 blur-3xl"
           animate={{
             x: [0, 20, 0],
             y: [0, -15, 0],
@@ -107,7 +114,7 @@ export function ContactSection() {
           }}
         />
         <motion.div
-          className="absolute bottom-1/3 left-1/4 w-72 h-72 rounded-full bg-purple-500/5 blur-3xl"
+          className="absolute bottom-1/3 left-1/4 w-72 h-72 rounded-full bg-blue-500/5 blur-3xl"
           animate={{
             x: [0, -20, 0],
             y: [0, 15, 0],
@@ -125,7 +132,7 @@ export function ContactSection() {
 
         {/* Floating icons */}
         <motion.div
-          className="absolute top-20 left-10 opacity-10 text-blue-300"
+          className="absolute top-20 left-10 opacity-10 text-red-300"
           animate={{
             y: [0, 15, 0],
             rotate: [0, 5, 0],
@@ -139,7 +146,7 @@ export function ContactSection() {
           <MessageCircle size={48} />
         </motion.div>
         <motion.div
-          className="absolute bottom-20 right-10 opacity-10 text-purple-300"
+          className="absolute bottom-20 right-10 opacity-10 text-blue-300"
           animate={{
             y: [0, -15, 0],
             rotate: [0, -5, 0],
@@ -171,8 +178,8 @@ export function ContactSection() {
             Let's Connect
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Have a project in mind or just want to say hello? I'd love to hear
-            from you!
+            Interested in collaboration, have questions about my work, or want
+            to discuss software engineering opportunities?
           </p>
         </motion.div>
 
@@ -205,12 +212,18 @@ export function ContactSection() {
                     <p className="font-medium text-foreground">
                       {method.title}
                     </p>
-                    <Link
-                      href={method.link}
-                      className="text-muted-foreground hover:text-accent-primary transition-colors"
-                    >
-                      {method.value}
-                    </Link>
+                    {method.link !== "#" ? (
+                      <Link
+                        href={method.link}
+                        className="text-muted-foreground hover:text-accent-primary transition-colors"
+                      >
+                        {method.value}
+                      </Link>
+                    ) : (
+                      <span className="text-muted-foreground">
+                        {method.value}
+                      </span>
+                    )}
                   </div>
                 </motion.div>
               ))}
@@ -219,7 +232,7 @@ export function ContactSection() {
             {/* Social links */}
             <div className="pt-4">
               <h3 className="text-lg font-semibold mb-4 text-foreground">
-                Follow me
+                Connect With Me
               </h3>
               <div className="flex gap-4">
                 {socialLinks.map((link, index) => (
@@ -243,6 +256,25 @@ export function ContactSection() {
                 ))}
               </div>
             </div>
+
+            {/* Additional Info */}
+            <motion.div
+              className="pt-6 border-t border-border/50"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 1.2 }}
+            >
+              <p className="text-sm text-muted-foreground">
+                <strong>Currently:</strong> Software Engineer at LivQuiz
+                (Remote)
+                <br />
+                <strong>Open to:</strong> Full-time opportunities, contract
+                work, and collaborations
+                <br />
+                <strong>Specialties:</strong> Flutter, Java, Machine Learning,
+                Mobile Development
+              </p>
+            </motion.div>
           </motion.div>
 
           {/* Contact form */}
@@ -263,7 +295,8 @@ export function ContactSection() {
                     exit={{ opacity: 0 }}
                     className="p-4 rounded-xl bg-green-500/10 border border-green-500/20 text-green-500 text-center"
                   >
-                    Thank you! Your message has been sent successfully.
+                    Thank you! Your message has been sent successfully. I'll get
+                    back to you soon.
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -296,6 +329,20 @@ export function ContactSection() {
                   {errors.email && (
                     <p className="text-red-500 text-sm mt-1">
                       Valid email is required
+                    </p>
+                  )}
+                </div>
+
+                <div>
+                  <Input
+                    {...register("subject", { required: true })}
+                    type="text"
+                    placeholder="Subject"
+                    className="bg-background/50 border-border/50 h-12 px-4 text-foreground placeholder:text-muted-foreground hover:border-accent-primary/50 focus:border-accent-primary transition-all"
+                  />
+                  {errors.subject && (
+                    <p className="text-red-500 text-sm mt-1">
+                      Subject is required
                     </p>
                   )}
                 </div>

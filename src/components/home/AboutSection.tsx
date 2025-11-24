@@ -7,29 +7,21 @@ import {
   AnimatePresence,
 } from "framer-motion";
 import { ReactElement, useRef, useState } from "react";
+import { Code, Server, Sparkles, Brain, Cpu, BookOpen } from "lucide-react";
+import { FaJava, FaDocker, FaNodeJs, FaReact } from "react-icons/fa6";
 import {
-  Code,
-  Server,
-  Sparkles,
-} from "lucide-react";
-import { FaDocker, FaNodeJs, FaReact } from "react-icons/fa6";
-import {
-  SiExpress,
-  SiNestjs,
-  SiNextdotjs,
-  SiPostgresql,
-  SiTypescript,
+  SiDart,
+  SiFlutter,
+
 } from "react-icons/si";
 
 const techIcons: Record<string, ReactElement> = {
-  "Node.js": <FaNodeJs className="h-4 w-4" />,
-  TypeScript: <SiTypescript className="h-4 w-4" />,
-  React: <FaReact className="h-4 w-4" />,
-  "Next.js": <SiNextdotjs className="h-4 w-4" />,
-  "Nest.js": <SiNestjs className="h-4 w-4" />,
-  "Express.js": <SiExpress className="h-4 w-4" />,
-  PostgreSql: <SiPostgresql className="h-4 w-4" />,
-  Docker: <FaDocker className="h-4 w-4" />,
+  Java: <FaJava className="h-4 w-4" />,
+  Dart: <SiDart className="h-4 w-4" />,
+  Flutter: <SiFlutter className="h-4 w-4" />,
+  "Machine Learning": <Brain className="h-4 w-4" />,
+  LLM: <Cpu className="h-4 w-4" />,
+  "Problem Solving": <BookOpen className="h-4 w-4" />,
 };
 
 export function AboutSection() {
@@ -132,7 +124,7 @@ export function AboutSection() {
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
-          className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full bg-blue-500/5 blur-3xl"
+          className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full bg-red-500/5 blur-3xl"
           animate={{
             x: [0, 20, 0],
             y: [0, -15, 0],
@@ -144,7 +136,7 @@ export function AboutSection() {
           }}
         />
         <motion.div
-          className="absolute bottom-1/3 left-1/4 w-72 h-72 rounded-full bg-purple-500/5 blur-3xl"
+          className="absolute bottom-1/3 left-1/4 w-72 h-72 rounded-full bg-blue-500/5 blur-3xl"
           animate={{
             x: [0, -20, 0],
             y: [0, 15, 0],
@@ -162,7 +154,7 @@ export function AboutSection() {
 
         {/* Floating icons */}
         <motion.div
-          className="absolute top-20 left-10 opacity-10 text-blue-300"
+          className="absolute top-20 left-10 opacity-10 text-red-300"
           animate={{
             y: [0, 15, 0],
             rotate: [0, 5, 0],
@@ -176,7 +168,7 @@ export function AboutSection() {
           <Code size={48} />
         </motion.div>
         <motion.div
-          className="absolute bottom-20 right-10 opacity-10 text-purple-300"
+          className="absolute bottom-20 right-10 opacity-10 text-blue-300"
           animate={{
             y: [0, -15, 0],
             rotate: [0, -5, 0],
@@ -188,7 +180,7 @@ export function AboutSection() {
             delay: 0.5,
           }}
         >
-          <Server size={48} />
+          <Brain size={48} />
         </motion.div>
       </div>
 
@@ -206,8 +198,8 @@ export function AboutSection() {
             About Me
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Discover my journey, skills, and passion for creating exceptional
-            digital experiences
+            Discover my journey in software engineering, competitive
+            programming, and passion for innovative solutions
           </p>
         </motion.div>
 
@@ -223,12 +215,11 @@ export function AboutSection() {
 
               <div className="relative rounded-3xl overflow-hidden border border-border/50 shadow-2xl bg-gradient-to-br from-card to-background">
                 <Image
-                  src="/meraj.jpg"
+                  src="/tanjid.jpg" // Update with Tanjid's image path
                   width={600}
                   height={600}
-                  alt="Professional developer headshot"
+                  alt="Tanjid Hossain Amran - Software Engineer"
                   className="mx-auto w-full max-w-[400px] md:max-w-none object-cover aspect-square z-10 relative"
-                  style={{ transform: "scaleX(-1)" }}
                   priority
                 />
 
@@ -239,7 +230,7 @@ export function AboutSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     className="px-4 py-2 bg-background/80 backdrop-blur-md rounded-full text-sm font-medium border border-border/50"
                   >
-                    Full Stack Architect
+                    Software Engineer & ML Enthusiast
                   </motion.div>
                 </div>
               </div>
@@ -267,7 +258,8 @@ export function AboutSection() {
               className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-foreground to-accent bg-clip-text text-transparent"
               variants={itemVariants}
             >
-              Engineering <span className="text-accent">Digital</span> Solutions
+              Building <span className="text-accent">Innovative</span> Software
+              Solutions
             </motion.h3>
 
             <div className="space-y-4 md:space-y-6 text-muted-foreground">
@@ -275,53 +267,57 @@ export function AboutSection() {
                 variants={itemVariants}
                 className="text-base md:text-lg leading-relaxed"
               >
-                Hi, I’m{" "}
-                <span className="font-semibold text-foreground">Meraj</span>, a{" "}
+                Hi, I'm{" "}
                 <span className="font-semibold text-foreground">
-                  Full Stack Developer
-                </span>{" "}
-                passionate about designing and building modern, scalable, and
-                secure web applications. My expertise lies in{" "}
+                  Tanjid Hossain Amran
+                </span>
+                , a{" "}
                 <span className="font-semibold text-foreground">
-                  React, Next.js, Node.js, Nest.js, Express, PostgreSQL
+                  Software Engineer
                 </span>{" "}
-                and cloud-native technologies like Docker.
+                and CSE graduate passionate about{" "}
+                <span className="font-semibold text-foreground">
+                  Java, Dart, Flutter, and Machine Learning
+                </span>
+                . With expertise in mobile development and AI, I specialize in
+                creating impactful digital solutions.
               </motion.p>
 
               <motion.p
                 variants={itemVariants}
                 className="text-base md:text-lg leading-relaxed"
               >
-                I love transforming ideas into impactful products with{" "}
+                I've solved{" "}
                 <span className="font-semibold text-foreground">
-                  clean architecture
-                </span>
-                ,{" "}
+                  370+ LeetCode problems
+                </span>{" "}
+                and competed in the{" "}
                 <span className="font-semibold text-foreground">
-                  optimized performance
+                  ICPC Dhaka Regional 2021
                 </span>
-                , and seamless user experiences. With hands-on experience across{" "}
+                . My professional journey includes building EdTech platforms
+                like{" "}
                 <span className="font-semibold text-foreground">
-                  frontend, backend, and database design
+                  LivQuiz and Softmax Online School
                 </span>
-                , I bring end-to-end solutions that balance business goals with
-                technical excellence.
+                , where I've enhanced user experiences through innovative
+                features.
               </motion.p>
 
               <motion.p
                 variants={itemVariants}
                 className="text-base md:text-lg leading-relaxed"
               >
-                Beyond coding, I enjoy{" "}
+                My research interests span{" "}
                 <span className="font-semibold text-foreground">
-                  learning emerging technologies
-                </span>{" "}
-                and contributing to projects that solve real-world challenges.
-                My ultimate goal is to keep growing as a{" "}
+                  deep learning, image processing, and software systems
+                </span>
+                . I've published work on{" "}
                 <span className="font-semibold text-foreground">
-                  problem-solver
+                  CycleGAN for image translation
                 </span>{" "}
-                while delivering value through technology.
+                and continue to explore cutting-edge technologies while
+                mentoring aspiring developers.
               </motion.p>
             </div>
 
@@ -329,7 +325,7 @@ export function AboutSection() {
             <motion.div variants={itemVariants} className="pt-2">
               <h3 className="text-sm font-semibold text-muted-foreground mb-4 uppercase tracking-wider flex items-center">
                 <span className="h-px w-8 bg-border mr-2" />
-                Technology Stack
+                Core Competencies
                 <span className="h-px w-8 bg-border ml-2" />
               </h3>
               <div className="flex flex-wrap gap-3">

@@ -1,32 +1,38 @@
 "use client";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Mail, Github, Linkedin } from "lucide-react";
+import { Mail, Github, Linkedin, MessageCircle } from "lucide-react";
+import { SiLeetcode } from "react-icons/si";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
   const links = [
     { href: "/#about", label: "About" },
-    { href: "/projects", label: "Projects" },
-    { href: "/services", label: "Services" },
+    { href: "/#experience", label: "Experience" },
+    { href: "/#projects", label: "Projects" },
     { href: "/#contact", label: "Contact" },
   ];
 
   const socialLinks = [
     {
       icon: <Mail className="h-4 w-4" />,
-      href: "mailto:merajhossain15901@gmail.com",
+      href: "mailto:tanjidhs470@gmail.com",
       label: "Email",
     },
     {
       icon: <Github className="h-4 w-4" />,
-      href: "https://github.com/meraj2704",
+      href: "https://github.com/Tanjid470",
       label: "GitHub",
     },
     {
       icon: <Linkedin className="h-4 w-4" />,
-      href: "https://www.linkedin.com/in/meraj-hossain-6566b8231/",
+      href: "https://www.linkedin.com/in/tanjid-amran-08b738202/",
       label: "LinkedIn",
+    },
+    {
+      icon: <SiLeetcode className="h-4 w-4" />,
+      href: "https://leetcode.com/Tanjid470",
+      label: "LeetCode",
     },
   ];
 
@@ -48,7 +54,9 @@ export function Footer() {
             className="text-sm text-muted-foreground"
           >
             &copy; {currentYear}{" "}
-            <span className="text-accent-primary">Meraj Hossain</span>. All
+            <Link href={"https://www.linkedin.com/in/meraj-hossain-6566b8231/"}>
+              <span className="text-accent-primary">Meraj Hossain</span>. All
+            </Link>
             rights reserved.
           </motion.p>
 

@@ -17,52 +17,120 @@ import {
   Code2,
   Cpu,
   Database,
+  Smartphone,
+  Brain,
+  GraduationCap,
 } from "lucide-react";
 
 // Work experience data
 const experiences = [
   {
     id: 1,
-    company: "ATI Limited",
-    position: "Junior Frontend Developer",
-    duration: "May 2024 - Present",
-    location: "Dhaka, Bangladesh",
+    company: "LivQuiz",
+    position: "Software Engineer",
+    duration: "Jan 2025 – Present",
+    location: "Montréal, Canada (Remote)",
     description:
-      "Developing modern web applications using Next.js, Nest.js, Express, and PostgreSQL. Collaborating with the team to build scalable and efficient solutions.",
+      "Developing an AI-powered EdTech platform supporting interactive learning through quizzes, flashcards, study sets, and multiplayer quiz play. Building innovative features for personalized learning experiences.",
     achievements: [
-      "Developing responsive user interfaces with Next.js and React",
-      "Building RESTful APIs with Nest.js and Express",
-      "Implementing database solutions with PostgreSQL",
-      "Collaborating with team members using Agile methodologies",
+      "Developed AI-powered EdTech app supporting interactive learning through quizzes and flashcards",
+      "Built multiplayer quiz play, exam practice, and public community system",
+      "Integrated AI learning features to personalize study experiences",
+      "Ensured smooth performance with optimized state management",
+      "Collaborated with remote team to deliver features on schedule",
     ],
     technologies: [
-      "Next.js",
-      "Nest.js",
-      "Express",
-      "PostgreSQL",
-      "React",
-      "TypeScript",
+      "Flutter",
+      "Dart",
+      "AI Integration",
+      "Riverpod",
+      "REST APIs",
+      "Firebase",
     ],
-    icon: <Code2 className="h-6 w-6" />,
-    accentColor: "from-blue-500 to-cyan-500",
+    icon: <Brain className="h-6 w-6" />,
+    accentColor: "from-purple-500 to-pink-500",
+    website: "https://livquiz.com",
   },
   {
     id: 2,
-    company: "SIDTECH",
-    position: "Frontend Developer",
-    duration: "Jan 2024 - Apr 2024",
-    location: "Lahore, Pakistan (Remote)",
+    company: "TutorsPlan",
+    position: "Mobile Application Developer (Contractual)",
+    duration: "Apr 2025 – Jul 2025",
+    location: "Dhaka, Bangladesh",
     description:
-      "Developed React-based applications with a focus on responsive design and user experience. Implemented modern UI components and integrated with backend APIs.",
+      "Developed MVP project to launch the business with comprehensive educational modules including authentication, course management, gameplay, exams, and payment integration.",
     achievements: [
-      "Built responsive web applications using React",
-      "Implemented modern UI components with custom styling",
-      "Collaborated with remote team members effectively",
-      "Improved application performance through optimization techniques",
+      "Built MVP project from scratch to launch the business",
+      "Developed modules: authentication, course view & enrollment, game-play, exams, and profile management",
+      "Integrated Stripe payment with login checks and security",
+      "Delivered project on tight deadlines for business launch",
+      "Implemented responsive UI for optimal user experience",
     ],
-    technologies: ["React", "JavaScript", "CSS3", "REST APIs", "Git"],
-    icon: <Cpu className="h-6 w-6" />,
-    accentColor: "from-violet-500 to-purple-500",
+    technologies: [
+      "Flutter",
+      "Dart",
+      "Stripe",
+      "REST APIs",
+      "State Management",
+      "Git",
+    ],
+    icon: <GraduationCap className="h-6 w-6" />,
+    accentColor: "from-blue-500 to-cyan-500",
+    website: "https://www.tutorsplan.com",
+  },
+  {
+    id: 3,
+    company: "Softmax Online School",
+    position: "Software Engineer",
+    duration: "Jan 2024 – Nov 2024",
+    location: "Gazipur, Bangladesh",
+    description:
+      "Enhanced EdTech mobile application by analyzing business policies, conducting R&D, and improving existing code structure. Leveraged user feedback to develop features that enhanced functionality and user experience.",
+    achievements: [
+      "Implemented user-requested features including seamless reinstall auto-login",
+      "Revised code structure for maintainability and future scalability",
+      "Improved overall user experience by conducting R&D and leveraging feedback",
+      "Integrated support systems and enhanced application performance",
+      "Contributed to positive user experience through continuous improvements",
+    ],
+    technologies: [
+      "Flutter",
+      "Dart",
+      "REST APIs",
+      "Code Refactoring",
+      "User Research",
+      "Performance Optimization",
+    ],
+    icon: <Code2 className="h-6 w-6" />,
+    accentColor: "from-green-500 to-emerald-500",
+    website: "https://softmaxonlineschool.com",
+  },
+  {
+    id: 4,
+    company: "Akij Venture Limited",
+    position: "Flutter Developer (Intern)",
+    duration: "Jun 2023 – Oct 2023",
+    location: "Dhaka, Bangladesh",
+    description:
+      "Contributed to multiple enterprise applications including Akij Bi-cycle, Takaful insurance app, and AVL applications. Worked on claim submission systems and health card functionality.",
+    achievements: [
+      "Developed Akij Bi-cycle app with authentication and UI cloning using GetX",
+      "Built Takaful app features including Claim Submission and Health Card with QR functionality",
+      "Integrated REST APIs to manage insurance workflows efficiently",
+      "Contributed to secure and efficient user access to healthcare services",
+      "Gained experience in enterprise-level application development",
+    ],
+    technologies: [
+      "Flutter",
+      "Dart",
+      "GetX",
+      "REST APIs",
+      "QR Integration",
+      "Enterprise Development",
+    ],
+    icon: <Smartphone className="h-6 w-6" />,
+    accentColor: "from-orange-500 to-red-500",
+    website: "https://www.akijventure.com",
   },
 ];
 
@@ -123,7 +191,7 @@ export function WorkExperience() {
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
-          className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full bg-blue-500/5 blur-3xl"
+          className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full bg-purple-500/5 blur-3xl"
           animate={{
             x: [0, 20, 0],
             y: [0, -15, 0],
@@ -135,7 +203,7 @@ export function WorkExperience() {
           }}
         />
         <motion.div
-          className="absolute bottom-1/3 left-1/4 w-72 h-72 rounded-full bg-purple-500/5 blur-3xl"
+          className="absolute bottom-1/3 left-1/4 w-72 h-72 rounded-full bg-blue-500/5 blur-3xl"
           animate={{
             x: [0, -20, 0],
             y: [0, 15, 0],
@@ -166,8 +234,8 @@ export function WorkExperience() {
             Work Experience
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            My professional path through innovative companies and challenging
-            projects
+            My path through EdTech innovation, mobile development, and
+            enterprise software solutions
           </p>
         </motion.div>
 
@@ -239,13 +307,26 @@ export function WorkExperience() {
                               </div>
                             </div>
                           </div>
-                          <button className="text-muted-foreground hover:text-foreground transition-colors p-1 rounded-full hover:bg-muted">
-                            {expandedId === exp.id ? (
-                              <ChevronUp className="h-5 w-5" />
-                            ) : (
-                              <ChevronDown className="h-5 w-5" />
+                          <div className="flex items-center gap-2">
+                            {exp.website && (
+                              <a
+                                href={exp.website}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-muted-foreground hover:text-foreground transition-colors p-1 rounded-full hover:bg-muted"
+                                onClick={(e) => e.stopPropagation()}
+                              >
+                                <ExternalLink className="h-4 w-4" />
+                              </a>
                             )}
-                          </button>
+                            <button className="text-muted-foreground hover:text-foreground transition-colors p-1 rounded-full hover:bg-muted">
+                              {expandedId === exp.id ? (
+                                <ChevronUp className="h-5 w-5" />
+                              ) : (
+                                <ChevronDown className="h-5 w-5" />
+                              )}
+                            </button>
+                          </div>
                         </div>
 
                         <div className="flex items-center mt-3 text-sm text-muted-foreground">
@@ -282,7 +363,7 @@ export function WorkExperience() {
                               <div className="pt-4 border-t border-border/50">
                                 <h4 className="font-semibold mb-3 text-foreground flex items-center">
                                   <Database className="h-4 w-4 mr-2 text-accent-primary" />
-                                  Key Achievements
+                                  Key Achievements & Responsibilities
                                 </h4>
                                 <ul className="space-y-3">
                                   {exp.achievements.map((achievement, i) => (
@@ -318,7 +399,7 @@ export function WorkExperience() {
         {/* Call to action */}
         <motion.div className="text-center mt-20" variants={itemVariants}>
           <p className="text-muted-foreground mb-6 text-lg">
-            Interested in my work and expertise?
+            Interested in my technical projects and applications?
           </p>
           <motion.a
             href="#projects"

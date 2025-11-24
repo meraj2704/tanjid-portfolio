@@ -19,75 +19,120 @@ import {
   Trophy,
 } from "lucide-react";
 
+import { 
+  Puzzle, 
+  Smartphone, 
+  Code2, 
+
+} from "lucide-react";
+
 // Certification data
 const certifications = [
   {
     id: 1,
-    title: "Frontend Developer (React) Certificate",
+    title: "Java (Basic) Certificate",
     issuer: "HackerRank",
-    date: "August 2024",
+    date: "2024",
     credentialId: null,
-    credentialUrl: "https://www.hackerrank.com/certificates/iframe/b4d7b6292f7b", // replace with actual if you have
+    credentialUrl: "https://www.hackerrank.com/certificates/iframe/your_java_certificate_id",
     description:
-      "Certified proficiency in React development, demonstrating the ability to build responsive and interactive frontend applications.",
-    skills: ["React", "Frontend Development", "JavaScript"],
+      "Certified proficiency in Java programming fundamentals, object-oriented programming, and problem-solving with Java.",
+    skills: ["Java", "OOP", "Problem Solving", "Algorithms"],
     icon: <BadgeCheck className="h-6 w-6" />,
-    accentColor: "from-emerald-500 to-teal-500",
+    accentColor: "from-red-500 to-orange-500",
   },
   {
     id: 2,
-    title: "JavaScript (Intermediate) Certificate",
+    title: "Problem Solving Certificate",
     issuer: "HackerRank",
-    date: "August 2024",
+    date: "2024",
     credentialId: null,
-    credentialUrl: "https://www.hackerrank.com/certificates/iframe/a1aa64088fb5", // replace with actual
+    credentialUrl: "https://www.hackerrank.com/certificates/iframe/your_problem_solving_certificate_id",
     description:
-      "Validated intermediate-level knowledge of JavaScript, including ES6 features, DOM manipulation, and problem-solving.",
-    skills: ["JavaScript", "Problem Solving", "ES6+", "Frontend Logic"],
-    icon: <BookOpen className="h-6 w-6" />,
-    accentColor: "from-yellow-500 to-amber-500",
+      "Validated advanced problem-solving skills with expertise in data structures, algorithms, and computational thinking.",
+    skills: ["Algorithms", "Data Structures", "Problem Solving", "Optimization"],
+    icon: <Puzzle className="h-6 w-6" />,
+    accentColor: "from-blue-500 to-cyan-500",
   },
   {
     id: 3,
-    title: "Responsive Web Design",
-    issuer: "freeCodeCamp",
-    date: "March 2023",
+    title: "ICPC Dhaka Regional 2021",
+    issuer: "International Collegiate Programming Contest",
+    date: "December 2021",
     credentialId: null,
-    credentialUrl: "https://www.freecodecamp.org/certification/meraj01/responsive-web-design", // replace with actual
+    credentialUrl: null,
     description:
-      "Demonstrated ability to build responsive websites using HTML, CSS, and modern web design practices.",
-    skills: ["HTML5", "CSS3", "Responsive Design", "Accessibility"],
-    icon: <GraduationCap className="h-6 w-6" />, // FCC doesn’t have its own icon
-    accentColor: "from-pink-500 to-rose-500",
+      "Competed in the prestigious ICPC Dhaka Regional Contest, ranking 164th among top programming teams from universities across the region.",
+    skills: ["Competitive Programming", "Algorithms", "Team Collaboration", "Time Management"],
+    icon: <Trophy className="h-6 w-6" />,
+    accentColor: "from-purple-500 to-pink-500",
   },
   {
     id: 4,
-    title: "SQL (Basic)",
-    issuer: "HackerRank",
-    date: "December 2022",
+    title: "Flutter & Dart Development",
+    issuer: "Self-Studied & Project-Based",
+    date: "2023-Present",
     credentialId: null,
-    credentialUrl: "https://www.hackerrank.com/certificates/iframe/39a72c6c8220", // replace with actual
+    credentialUrl: null,
     description:
-      "Certified in SQL basics, including database queries, filtering, sorting, and simple joins.",
-    skills: ["SQL", "Database Management", "Queries", "Data Analysis"],
-    icon: <BookOpen className="h-6 w-6" />,
-    accentColor: "from-indigo-500 to-sky-500",
+      "Mastered Flutter and Dart through building production-level applications including LivQuiz, TutorsPlan, and multiple published apps on Google Play Store.",
+    skills: ["Flutter", "Dart", "Mobile Development", "State Management", "REST APIs"],
+    icon: <Smartphone className="h-6 w-6" />,
+    accentColor: "from-cyan-500 to-blue-500",
   },
   {
     id: 5,
-    title: "ICPC Regional Contest 2021",
-    issuer: "ICPC",
-    date: "October 2022",
+    title: "Machine Learning Research Publication",
+    issuer: "IEEE - NCIM 2025",
+    date: "2025",
     credentialId: null,
-    credentialUrl: null, // usually contest participation doesn’t have a link
+    credentialUrl: "https://ieeexplore.ieee.org/document/your_paper_id",
     description:
-      "Participated in the prestigious ICPC Regional Contest, showcasing algorithmic problem-solving and competitive programming skills.",
-    skills: ["Algorithms", "Data Structures", "Problem Solving", "Teamwork"],
-    icon: <Trophy className="h-6 w-6" />, // best fit for contest achievement
-    accentColor: "from-orange-500 to-red-500",
+      "Published research paper 'Performance Comparison of CycleGAN for Image-to-Image Translation in Multiple Domains' in IEEE International Conference.",
+    skills: ["Machine Learning", "CycleGAN", "Research", "Python", "Deep Learning"],
+    icon: <GraduationCap className="h-6 w-6" />,
+    accentColor: "from-green-500 to-emerald-500",
   },
+  {
+    id: 6,
+    title: "LeetCode 370+ Problems Solved",
+    issuer: "LeetCode",
+    date: "2022-Present",
+    credentialId: null,
+    credentialUrl: "https://leetcode.com/Tanjid470",
+    description:
+      "Solved 370+ coding problems on LeetCode platform, demonstrating strong algorithmic thinking and problem-solving capabilities across various difficulty levels.",
+    skills: ["Data Structures", "Algorithms", "Problem Solving", "System Design"],
+    icon: <Code2 className="h-6 w-6" />,
+    accentColor: "from-orange-500 to-yellow-500",
+  },
+  {
+    id: 7,
+    title: "CodeChef (1053 Rating)",
+    issuer: "CodeChef",
+    date: "2022-Present",
+    credentialId: null,
+    credentialUrl: "https://www.codechef.com/users/tanjid470",
+    description:
+      "Active competitive programmer on CodeChef with 1053 rating, participating in regular contests and improving algorithmic problem-solving skills.",
+    skills: ["Competitive Programming", "Algorithms", "Mathematics", "Optimization"],
+    icon: <Award className="h-6 w-6" />,
+    accentColor: "from-brown-500 to-yellow-700",
+  },
+  {
+    id: 8,
+    title: "Software Engineering Fundamentals",
+    issuer: "Northern University Bangladesh",
+    date: "2023",
+    credentialId: "B.Sc in CSE",
+    credentialUrl: null,
+    description:
+      "Completed Bachelor of Science in Computer Science and Engineering with coursework in data structures, algorithms, machine learning, and software engineering principles.",
+    skills: ["Software Engineering", "Data Structures", "Algorithms", "Machine Learning", "Database Systems"],
+    icon: <BookOpen className="h-6 w-6" />,
+    accentColor: "from-indigo-500 to-purple-500",
+  }
 ];
-
 export function Certifications() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [expandedId, setExpandedId] = useState<number | null>(null);

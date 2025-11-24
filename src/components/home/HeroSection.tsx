@@ -31,9 +31,13 @@ import {
   GitBranch,
   ArrowRight,
   GitBranchIcon,
+  BookOpen,
+  Brain,
+  Smartphone,
+  CpuIcon,
 } from "lucide-react";
 import ScrollIndicator from "./ScrollIndicator";
-import { FaGithub, FaHackerrank, FaReact } from "react-icons/fa6";
+import { FaGithub, FaHackerrank, FaReact, FaJava } from "react-icons/fa6";
 import {
   SiCodechef,
   SiExpress,
@@ -41,35 +45,26 @@ import {
   SiNestjs,
   SiNextdotjs,
   SiPostgresql,
+  SiDart,
+  SiFlutter,
 } from "react-icons/si";
 import { ResumePreview } from "./ResumePreview";
 
 const HTML_TAGS = [
-  "<div>",
-  "<section>",
-  "<h1>",
-  "<p>",
-  "<button>",
-  "<span>",
-  "<a>",
-  "<main>",
-  "<header>",
-  "<footer>",
-  "<nav>",
-  "<ul>",
-  "<NextJS/>",
-  "<React/>",
-  "<NodeJS/>",
-  "<TypeScript/>",
+
+  "<Java/>",
+  "<Flutter/>",
+  "<Dart/>",
+  "<ML/>",
 ];
 
 const FLOATING_ICONS = [
-  { icon: <SiExpress size={20} />, color: "text-blue-400" },
-  { icon: <FaReact size={20} />, color: "text-green-400" },
-  { icon: <SiNextdotjs size={20} />, color: "text-purple-400" },
-  { icon: <SiNestjs size={20} />, color: "text-yellow-400" },
-  { icon: <SiPostgresql size={20} />, color: "text-cyan-400" },
-  { icon: <FaGithub size={20} />, color: "text-pink-400" },
+  { icon: <FaJava size={20} />, color: "text-red-400" },
+  { icon: <SiDart size={20} />, color: "text-blue-400" },
+  { icon: <SiFlutter size={20} />, color: "text-cyan-400" },
+  { icon: <Brain size={20} />, color: "text-purple-400" },
+  { icon: <CpuIcon size={20} />, color: "text-green-400" },
+  { icon: <FaGithub size={20} />, color: "text-gray-400" },
 ];
 
 export function HeroSection() {
@@ -84,28 +79,28 @@ export function HeroSection() {
   const scale = useTransform(scrollYProgress, [0, 0.5], [0.95, 1]);
 
   const personalInfo = {
-    name: "Meraj Hossain",
-    title: "Full Stack Developer",
+    name: "Tanjid Hossain Amran",
+    title: "Software Engineer",
     specialties: [
-      "Express.js",
-      "React",
-      "Next.js",
-      "Nest.js",
-      "PostgreSQL",
-      "Git",
+      "Java",
+      "Dart",
+      "Flutter",
+      "Machine Learning",
+      "LLM",
+      "Problem Solving",
     ],
-    currentRole: "Jr. Full Stack Developer at ATI Limited",
-    yearsExperience: "1.5+ years",
+    currentRole: "Software Engineer at LivQuiz",
+    yearsExperience: "2+ years",
     location: "Dhaka, Bangladesh",
-    email: "merajhossain15901@gmail.com",
-    phone: "+8801684088348",
-    resumeUrl: "/Meraj_Resume.pdf",
+    email: "tanjidhs470@gmail.com",
+    phone: "+8801645144735",
+    resumeUrl: "/Tanjid_Resume.pdf",
     socialLinks: {
-      github: "https://github.com/meraj2704",
-      linkedin: "https://www.linkedin.com/in/meraj-hossain-6566b8231/",
-      hackerRank: "https://www.hackerrank.com/profile/mh1669101",
-      codeChef: "https://www.codechef.com/users/ije_2704",
-      leetCode: "https://leetcode.com/u/r0TFSzt8Ho",
+      github: "https://github.com/Tanjid470",
+      linkedin: "https://www.linkedin.com/in/tanjid-amran-08b738202/",
+      hackerRank: "https://www.hackerrank.com/profile/tanjidamran11",
+      codeChef: "https://www.codechef.com/users/tanjid470",
+      leetCode: "https://leetcode.com/Tanjid470",
     },
   };
 
@@ -223,7 +218,7 @@ export function HeroSection() {
       >
         {/* Gradient Orbs */}
         <motion.div
-          className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-gradient-to-r from-blue-500/10 to-cyan-500/10 blur-3xl"
+          className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-gradient-to-r from-red-500/10 to-purple-500/10 blur-3xl"
           animate={{
             x: [0, 30, 0],
             y: [0, -20, 0],
@@ -236,7 +231,7 @@ export function HeroSection() {
           }}
         />
         <motion.div
-          className="absolute bottom-1/3 right-1/4 w-80 h-80 rounded-full bg-gradient-to-r from-purple-500/10 to-pink-500/10 blur-3xl"
+          className="absolute bottom-1/3 right-1/4 w-80 h-80 rounded-full bg-gradient-to-r from-blue-500/10 to-cyan-500/10 blur-3xl"
           animate={{
             x: [0, -25, 0],
             y: [0, 15, 0],
@@ -458,7 +453,7 @@ export function HeroSection() {
               <div className="relative">
                 <p className="text-xl md:text-2xl text-foreground leading-relaxed font-light relative z-10">
                   <TypingEffect
-                    text={`Crafting digital experiences with ${personalInfo.yearsExperience} years of expertise. Specializing in modern full-stack development, I transform ideas into scalable, performant applications that users love.`}
+                    text={`CSE graduate with 370+ LeetCode problems solved and ICPC experience. Specializing in Java, Flutter, and Machine Learning, I build innovative software solutions from EdTech platforms to enterprise applications. Passionate about transforming complex problems into elegant, user-friendly applications.`}
                     speed={40}
                     delay={600}
                   />
