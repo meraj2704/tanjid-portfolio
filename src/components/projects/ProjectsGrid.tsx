@@ -17,6 +17,7 @@ export function ProjectsGrid({ projects }: ProjectsGridProps) {
           demoUrl={project.liveDemo}
           githubUrl={project.githubLink}
           technologies={project.Technology.map((t: any) => t.name)}
+          featured={project.featured}
         />
       ))}
     </div>

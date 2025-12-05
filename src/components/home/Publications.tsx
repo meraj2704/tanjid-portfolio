@@ -33,7 +33,7 @@ const publications = [
     publisher:
       "IEEE - International Conference on Next-Generation Computing, IoT and Machine Learning (NCIM 2025)",
     date: "2025",
-    url: "https://ieeexplore.ieee.org/document/your_paper_id",
+    url: "https://ieeexplore.ieee.org/document/11160223",
     description:
       "Comparative analysis of CycleGAN performance across different image translation domains including style transfer, season translation, and medical imaging.",
     abstract:
@@ -52,59 +52,6 @@ const publications = [
     icon: <BookOpen className="h-6 w-6" />,
     accentColor: "from-purple-500 to-pink-500",
     badge: "Conference Paper",
-  },
-  {
-    id: 2,
-    title:
-      "Comparative Analysis of Traditional and Deep Learning Models Using Trigram-TF-IDF for Bangla Restaurant Sentiment Classification",
-    publisher:
-      "International Conference on Electrical Information and Communication Technology (EICT 2025)",
-    date: "2025",
-    url: null,
-    description:
-      "Research comparing traditional machine learning approaches with deep learning models for sentiment analysis in Bangla restaurant reviews using enhanced feature extraction.",
-    abstract:
-      "This study investigates the effectiveness of traditional machine learning models versus deep learning approaches for sentiment classification in Bangla restaurant reviews. We propose a Trigram-TF-IDF feature extraction method and compare performance across multiple architectures. The research provides insights into optimal model selection for low-resource languages and domain-specific sentiment analysis tasks.",
-    topics: [
-      "Sentiment Analysis",
-      "Bangla NLP",
-      "Deep Learning",
-      "Machine Learning",
-      "TF-IDF",
-    ],
-    citation:
-      "M. H. Rumi, T. H. Amran, F. Muntashir, 'Comparative Analysis of Traditional and Deep Learning Models Using Trigram-TF-IDF for Bangla Restaurant Sentiment Classification,' EICT 2025 (Under Review)",
-    citationCount: null,
-    readTime: "12 min read",
-    icon: <BarChart3 className="h-6 w-6" />,
-    accentColor: "from-blue-500 to-cyan-500",
-    badge: "Conference Paper",
-  },
-  {
-    id: 3,
-    title:
-      "Mobile Application Development Best Practices for Educational Technology Platforms",
-    publisher: "Northern University Bangladesh - Computer Science Department",
-    date: "2023",
-    url: null,
-    description:
-      "Comprehensive study on developing effective EdTech mobile applications based on practical experience from multiple educational platform developments.",
-    abstract:
-      "This research synthesizes best practices and lessons learned from developing multiple educational technology mobile applications including LivQuiz, Softmax Online School, and TutorsPlan. The paper covers architecture patterns, state management strategies, performance optimization, and user experience considerations specific to educational mobile applications. Findings are based on real-world deployment and user feedback analysis.",
-    topics: [
-      "Mobile Development",
-      "EdTech",
-      "Flutter",
-      "User Experience",
-      "Software Architecture",
-    ],
-    citation:
-      "T. H. Amran, 'Mobile Application Development Best Practices for Educational Technology Platforms,' NUB CSE Department, 2023",
-    citationCount: null,
-    readTime: "8 min read",
-    icon: <Smartphone className="h-6 w-6" />,
-    accentColor: "from-green-500 to-emerald-500",
-    badge: "Technical Report",
   },
 ];
 
@@ -296,7 +243,11 @@ export function Publications() {
             <motion.div
               key={pub.id}
               variants={itemVariants}
-              className="h-full"
+              className={`h-full ${
+                filteredPublications.length === 1
+                  ? "md:col-span-2 lg:col-span-3"
+                  : ""
+              }`}
               layout
             >
               {/* Publication card with unique book-like design */}

@@ -24,9 +24,7 @@ export function ProjectsSection() {
   const opacity = useTransform(scrollYProgress, [0.1, 0.3], [0, 1]);
   const scale = useTransform(scrollYProgress, [0, 0.5], [0.95, 1]);
 
-  const featuredProjects = projectsData
-    .filter((p) => p.featured)
-    .slice(0, 3);
+  const featuredProjects = projectsData.filter((p) => p.featured).slice(0, 3);
 
   // Animation variants
   const containerVariants = {
@@ -141,7 +139,8 @@ export function ProjectsSection() {
             Featured Projects
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Selected works showcasing my expertise in full-stack development and innovative solutions
+            Selected works showcasing my expertise in full-stack development and
+            innovative solutions
           </p>
         </motion.div>
 
@@ -154,9 +153,9 @@ export function ProjectsSection() {
           viewport={{ once: false, margin: "-50px" }}
         >
           {featuredProjects.map((project: any, index: number) => (
-            <motion.div 
-              key={project.id} 
-              variants={itemVariants} 
+            <motion.div
+              key={project.id}
+              variants={itemVariants}
               custom={index}
               className="h-full"
             >
@@ -169,16 +168,14 @@ export function ProjectsSection() {
                 demoUrl={project.liveDemo}
                 githubUrl={project.githubLink}
                 technologies={project?.Technology?.map((t: any) => t.name)}
+                featured={project.featured}
               />
             </motion.div>
           ))}
         </motion.div>
 
         {/* Call to action */}
-        <motion.div
-          className="text-center mt-20"
-          variants={itemVariants}
-        >
+        <motion.div className="text-center mt-20" variants={itemVariants}>
           <p className="text-muted-foreground mb-6 text-lg">
             Want to see more of my work?
           </p>

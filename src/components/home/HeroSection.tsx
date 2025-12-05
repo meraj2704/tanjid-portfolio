@@ -13,50 +13,22 @@ import { Button } from "../ui/button";
 import { TypingEffect } from "../typing-effect";
 import { useState, useEffect, useRef } from "react";
 import {
-  Download,
   Mail,
   Phone,
   MapPin,
-  ChevronDown,
   Github,
   Linkedin,
-  Twitter,
-  Instagram,
   Sparkles,
-  Code,
-  Server,
-  Cpu,
-  Database,
-  Cloud,
-  GitBranch,
   ArrowRight,
-  GitBranchIcon,
-  BookOpen,
   Brain,
-  Smartphone,
   CpuIcon,
 } from "lucide-react";
 import ScrollIndicator from "./ScrollIndicator";
 import { FaGithub, FaHackerrank, FaReact, FaJava } from "react-icons/fa6";
-import {
-  SiCodechef,
-  SiExpress,
-  SiLeetcode,
-  SiNestjs,
-  SiNextdotjs,
-  SiPostgresql,
-  SiDart,
-  SiFlutter,
-} from "react-icons/si";
+import { SiCodechef, SiLeetcode, SiDart, SiFlutter } from "react-icons/si";
 import { ResumePreview } from "./ResumePreview";
 
-const HTML_TAGS = [
-
-  "<Java/>",
-  "<Flutter/>",
-  "<Dart/>",
-  "<ML/>",
-];
+const HTML_TAGS = ["<Java/>", "<Flutter/>", "<Dart/>", "<ML/>"];
 
 const FLOATING_ICONS = [
   { icon: <FaJava size={20} />, color: "text-red-400" },
@@ -79,8 +51,8 @@ export function HeroSection() {
   const scale = useTransform(scrollYProgress, [0, 0.5], [0.95, 1]);
 
   const personalInfo = {
-    name: "Tanjid Hossain Amran",
-    title: "Software Engineer",
+    name: "Tanjid Amran",
+    title: "Flutter Developer | Software Engineer",
     specialties: [
       "Java",
       "Dart",

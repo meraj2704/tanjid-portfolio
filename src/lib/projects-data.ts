@@ -19,15 +19,11 @@ Key features include:
 Built with **Flutter and Dart**, the application uses **Riverpod for state management** and integrates with **Firebase for backend services**. 
 The AI features provide personalized learning recommendations to enhance user engagement and educational outcomes.
     `,
-    thumbnail: "/projects/livquiz/livquiz-thumbnail.png",
+    thumbnail: "/projects/LivQuiz.png",
     images: [
-      "/projects/livquiz/livquiz-thumbnail.png",
-      "/projects/livquiz/livquiz-home.png",
-      "/projects/livquiz/livquiz-quiz.png",
-      "/projects/livquiz/livquiz-flashcards.png",
-      "/projects/livquiz/livquiz-multiplayer.png",
+      "/projects/LivQuiz.png",
+
     ],
-    liveDemo: "https://livquiz.com",
     githubLink: null, // private repo
     Technology: [
       { name: "Flutter" },
@@ -40,7 +36,7 @@ The AI features provide personalized learning recommendations to enhance user en
     startDate: "2025-01-01",
     endDate: "Present",
     status: "In Progress",
-    featured: true,
+    featured: false,
   },
   {
     id: 2,
@@ -66,7 +62,6 @@ The MVP was developed under tight deadlines to **successfully launch the busines
       "/projects/tutorsplan.png",
 
     ],
-    liveDemo: "https://www.tutorsplan.com",
     githubLink: null, // private repo
     Technology: [
       { name: "Flutter" },
@@ -79,7 +74,7 @@ The MVP was developed under tight deadlines to **successfully launch the busines
     startDate: "2025-04-01",
     endDate: "2025-07-30",
     status: "Completed",
-    featured: true,
+    featured: false,
   },
   {
     id: 3,
@@ -104,7 +99,7 @@ Through continuous **research and development**, the application evolved to bett
       "/projects/softmax.png"
 
     ],
-    liveDemo: "https://softmaxonlineschool.com",
+    liveDemo: "https://play.google.com/store/apps/details?id=com.soslearning.softmax&pcampaignid=web_share",
     githubLink: null, // private repo
     Technology: [
       { name: "Flutter" },
@@ -143,7 +138,7 @@ The application is **published on Google Play Store** with active users, demonst
       "/projects/nubcc.png"
 
     ],
-    liveDemo: "https://play.google.com/store/apps/details?id=com.tanjid.nubcc",
+    liveDemo: "https://play.google.com/store/apps/details?id=com.tanjid.nubcc&pcampaignid=web_share",
     githubLink: null, // private repo
     Technology: [
       { name: "Flutter" },
@@ -155,7 +150,7 @@ The application is **published on Google Play Store** with active users, demonst
     startDate: "2023-06-01",
     endDate: "2023-12-15",
     status: "Completed",
-    featured: false,
+    featured: true,
   },
   {
     id: 5,
@@ -178,9 +173,9 @@ The application contributes to **efficient healthcare service delivery** by digi
     thumbnail: "/projects/akij.png",
     images: [
       "/projects/akij.png",
-     
+
     ],
-    liveDemo: "https://play.google.com/store/apps/details?id=com.akijtakafullife.myAkijTakaful",
+    liveDemo: "https://play.google.com/store/apps/details?id=com.akijtakafullife.myAkijTakaful&pcampaignid=web_share",
     githubLink: null, // private repo
     Technology: [
       { name: "Flutter" },
@@ -193,7 +188,7 @@ The application contributes to **efficient healthcare service delivery** by digi
     startDate: "2023-06-01",
     endDate: "2023-10-30",
     status: "Completed",
-    featured: false,
+    featured: true,
   },
   {
     id: 6,
@@ -217,12 +212,10 @@ All applications feature:
 
 These projects demonstrate versatility in software development across different platforms and application types.
     `,
-    thumbnail: "/projects/java-apps/java-apps-thumbnail.png",
+    thumbnail: "/projects/java.png",
     images: [
-      "/projects/java-apps/java-apps-thumbnail.png",
-      "/projects/java-apps/java-notepad.png",
-      "/projects/java-apps/java-atm.png",
-      "/projects/java-apps/java-library.png",
+      "/projects/java.png",
+
     ],
     liveDemo: null,
     githubLink: "https://github.com/Tanjid470/Java-Desktop-Applications",

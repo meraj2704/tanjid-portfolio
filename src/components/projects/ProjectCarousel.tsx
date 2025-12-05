@@ -39,8 +39,9 @@ export function ProjectCarousel({
               <Image
                 src={image || "/placeholder.svg"}
                 alt={`${title} image ${index + 1}`}
-                fill
-                className="object-cover"
+                width={5000}
+                height={2500}
+                loading="lazy"
               />
             </div>
           </CarouselItem>

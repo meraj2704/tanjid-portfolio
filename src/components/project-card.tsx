@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { Github, ExternalLink, ArrowRight, Sparkles } from "lucide-react";
+import { Github, ArrowRight, Sparkles, Play } from "lucide-react";
 import {
   Card,
   CardContent,
@@ -12,6 +12,7 @@ import {
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { useRef } from "react";
+import { IoLogoGooglePlaystore } from "react-icons/io5";
 
 interface ProjectCardProps {
   id: string | number;
@@ -21,6 +22,7 @@ interface ProjectCardProps {
   demoUrl?: string | null;
   githubUrl?: string | null;
   technologies: string[] | undefined | null;
+  featured: boolean;
 }
 
 export function ProjectCard({
@@ -31,6 +33,7 @@ export function ProjectCard({
   demoUrl,
   githubUrl,
   technologies,
+  featured,
 }: ProjectCardProps) {
   const cardRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -76,17 +79,19 @@ export function ProjectCard({
               className="w-full h-48 object-cover object-top transition-transform duration-700 group-hover:scale-110"
               priority
             />
-            
+
             {/* Overlay gradient */}
             <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            
+
             {/* Featured badge */}
-            <div className="absolute top-3 left-3">
-              <div className="inline-flex items-center justify-center rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
-                <Sparkles className="h-3 w-3 mr-1" />
-                Featured
+            {featured && (
+              <div className="absolute top-3 left-3">
+                <div className="inline-flex items-center justify-center rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+                  <Sparkles className="h-3 w-3 mr-1" />
+                  Featured
+                </div>
               </div>
-            </div>
+            )}
           </motion.div>
 
           <CardHeader className="relative z-20 p-6 pb-4">
@@ -116,10 +121,7 @@ export function ProjectCard({
                 </Badge>
               ))}
               {technologies && technologies.length > 4 && (
-                <Badge
-                  variant="outline"
-                  className="text-xs bg-background/50"
-                >
+                <Badge variant="outline" className="text-xs bg-background/50">
                   +{technologies.length - 4}
                 </Badge>
               )}
@@ -139,17 +141,20 @@ export function ProjectCard({
               </Link>
 
               {demoUrl && (
-                <Link
-                  href={demoUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <Link href={demoUrl} target="_blank" rel="noopener noreferrer">
                   <Button
                     size="sm"
                     className="h-10 w-10 p-0 text-muted-foreground hover:text-accent-primary hover:bg-accent-primary/10 transition-all group/demo rounded-lg border border-border/50"
                     title="Live Demo"
                   >
-                    <ExternalLink className="h-4 w-4 transition-transform group-hover/demo:scale-110" />
+                    {/* <Image
+                      src={"/logos/play-store.jpeg"}
+                      width={16}
+                      height={16}
+                      alt="play-store"
+                      className="object-cover"
+                    /> */}
+                    <IoLogoGooglePlaystore className="h-4 w-4 transition-transform group-hover/demo:scale-110" />
                   </Button>
                 </Link>
               )}
@@ -172,7 +177,6 @@ export function ProjectCard({
             </div>
           </CardContent>
         </Card>
-      </motion.div>
-    </motion.div>
+      </motion.div> </motion.div>
   );
 }
