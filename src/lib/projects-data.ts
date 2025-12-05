@@ -61,13 +61,10 @@ Core modules include:
 
 The MVP was developed under tight deadlines to **successfully launch the business**, demonstrating rapid development capabilities and attention to user experience.
     `,
-    thumbnail: "/projects/tutorsplan/tutorsplan-thumbnail.png",
+    thumbnail: "/projects/tutorsplan.png",
     images: [
-      "/projects/tutorsplan/tutorsplan-thumbnail.png",
-      "/projects/tutorsplan/tutorsplan-courses.png",
-      "/projects/tutorsplan/tutorsplan-game.png",
-      "/projects/tutorsplan/tutorsplan-exam.png",
-      "/projects/tutorsplan/tutorsplan-profile.png",
+      "/projects/tutorsplan.png",
+
     ],
     liveDemo: "https://www.tutorsplan.com",
     githubLink: null, // private repo
@@ -102,13 +99,10 @@ Key contributions:
 
 Through continuous **research and development**, the application evolved to better serve educational needs while maintaining a positive user experience.
     `,
-    thumbnail: "/projects/softmax/softmax-thumbnail.png",
+    thumbnail: "/projects/softmax.png",
     images: [
-      "/projects/softmax/softmax-thumbnail.png",
-      "/projects/softmax/softmax-home.png",
-      "/projects/softmax/softmax-courses.png",
-      "/projects/softmax/softmax-profile.png",
-      "/projects/softmax/softmax-support.png",
+      "/projects/softmax.png"
+
     ],
     liveDemo: "https://softmaxonlineschool.com",
     githubLink: null, // private repo
@@ -144,13 +138,10 @@ Features include:
 
 The application is **published on Google Play Store** with active users, demonstrating end-to-end development and deployment capabilities.
     `,
-    thumbnail: "/projects/nubcc/nubcc-thumbnail.png",
+    thumbnail: "/projects/nubcc.png",
     images: [
-      "/projects/nubcc/nubcc-thumbnail.png",
-      "/projects/nubcc/nubcc-home.png",
-      "/projects/nubcc/nubcc-faculty.png",
-      "/projects/nubcc/nubcc-utilities.png",
-      "/projects/nubcc/nubcc-alumni.png",
+      "/projects/nubcc.png"
+
     ],
     liveDemo: "https://play.google.com/store/apps/details?id=com.tanjid.nubcc",
     githubLink: null, // private repo
@@ -184,13 +175,10 @@ Key functionalities:
 
 The application contributes to **efficient healthcare service delivery** by digitizing insurance processes and making healthcare access more convenient for users.
     `,
-    thumbnail: "/projects/akij-takaful/akij-takaful-thumbnail.png",
+    thumbnail: "/projects/akij.png",
     images: [
-      "/projects/akij-takaful/akij-takaful-thumbnail.png",
-      "/projects/akij-takaful/akij-takaful-claims.png",
-      "/projects/akij-takaful/akij-takaful-healthcard.png",
-      "/projects/akij-takaful/akij-takaful-profile.png",
-      "/projects/akij-takaful/akij-takaful-services.png",
+      "/projects/akij.png",
+     
     ],
     liveDemo: "https://play.google.com/store/apps/details?id=com.akijtakafullife.myAkijTakaful",
     githubLink: null, // private repo

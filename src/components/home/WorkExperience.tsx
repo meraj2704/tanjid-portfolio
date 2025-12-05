@@ -21,6 +21,8 @@ import {
   Brain,
   GraduationCap,
 } from "lucide-react";
+import Image from "next/image";
+import path from "path";
 
 // Work experience data
 const experiences = [
@@ -47,7 +49,7 @@ const experiences = [
       "REST APIs",
       "Firebase",
     ],
-    icon: <Brain className="h-6 w-6" />,
+    path: "/logos/livquiz.png",
     accentColor: "from-purple-500 to-pink-500",
     website: "https://livquiz.com",
   },
@@ -74,7 +76,7 @@ const experiences = [
       "State Management",
       "Git",
     ],
-    icon: <GraduationCap className="h-6 w-6" />,
+    path: "/logos/tutors.png",
     accentColor: "from-blue-500 to-cyan-500",
     website: "https://www.tutorsplan.com",
   },
@@ -101,7 +103,7 @@ const experiences = [
       "User Research",
       "Performance Optimization",
     ],
-    icon: <Code2 className="h-6 w-6" />,
+    path: "/logos/softmax.png",
     accentColor: "from-green-500 to-emerald-500",
     website: "https://softmaxonlineschool.com",
   },
@@ -128,7 +130,7 @@ const experiences = [
       "QR Integration",
       "Enterprise Development",
     ],
-    icon: <Smartphone className="h-6 w-6" />,
+    path: "/logos/akij.svg",
     accentColor: "from-orange-500 to-red-500",
     website: "https://www.akijventure.com",
   },
@@ -242,7 +244,22 @@ export function WorkExperience() {
         {/* Modern timeline */}
         <div className="relative">
           {/* Vertical timeline line with gradient */}
-          <div className="absolute left-6 sm:left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-accent-primary to-accent-secondary transform md:-translate-x-1/2 z-0" />
+          {/* <div className="absolute left-6 sm:left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-accent-primary to-accent-secondary transform md:-translate-x-1/2 z-0" /> */}
+
+          <div className="absolute left-6 sm:left-8 md:left-1/2 top-0 bottom-0 w-0.5 overflow-hidden z-0">
+            <motion.div
+              className="w-full h-full bg-gradient-to-b from-accent-primary to-accent-secondary"
+              initial={{ scaleY: 0 }}
+              whileInView={{ scaleY: 1 }}
+              viewport={{ once: false }}
+              transition={{
+                duration: 1.5,
+                ease: "easeInOut",
+                delay: 0.3,
+              }}
+              style={{ transformOrigin: "top" }}
+            />
+          </div>
 
           {/* Experience items */}
           <div className="space-y-10 relative z-10">
@@ -282,11 +299,13 @@ export function WorkExperience() {
 
                     <div className="flex flex-col md:flex-row md:items-start gap-6">
                       {/* Icon with gradient background */}
-                      <div
-                        className={`w-16 h-16 rounded-xl bg-gradient-to-br ${exp.accentColor} flex items-center justify-center text-white shadow-lg`}
-                      >
-                        {exp.icon}
-                      </div>
+                      <Image
+                        src={exp.path}
+                        className={`w-16 h-16 rounded-xl`}
+                        alt="logo"
+                        width={16}
+                        height={16}
+                      ></Image>
 
                       {/* Content */}
                       <div className="flex-1">
